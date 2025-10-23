@@ -1,0 +1,19 @@
+.product-item {
+    background: #2b5ced;
+    color: black;
+    transition: transform 0.3s ease, z-index 0s;
+    position: relative;
+    z-index: 1;
+}
+
+.product-item:hover {
+  transform: scale(1.1); 
+  z-index: 10; 
+}
+
+.product-item img {
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}

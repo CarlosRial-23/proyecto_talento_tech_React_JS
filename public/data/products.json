@@ -1,0 +1,29 @@
+[
+    {
+        "id" : "1",
+        "name" : "PC Oficina",
+        "price" : 800000,
+        "category" : "oficina",
+        "description" : "PC basica para uso domestico o de oficina.",
+        "imageUrl" : "/images/pc_oficina.jpg"
+    },
+    {
+        "id" : "2",
+        "name" : "PC Gamer Basica",
+        "price" : 1150000,
+        "category" : "gamer",
+        "description" : "PC Gamer para disfrutar los ultimos lanzamientos.",
+        "imageUrl" : "/images/pc_gamerBasica.jpg"
+    },
+    {
+        "id" : "3",
+        "name" : "PC Gamer Pro",
+        "price" : 1980000,
+        "category" : "gamer",
+        "description" : "PC Gamer para diseño grafico o los juegos mas exigentes.",
+        "imageUrl" : "/images/pc_gamerPro.jpg"
+    }
+
+
+
+]
