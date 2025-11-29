@@ -24,7 +24,6 @@ function App() {
     <BrowserRouter>
       <CartProvider>
           <div> 
-      <Header/>
           <Routes>
             <Route element ={<MainLayout/>}> 
               <Route path="/" element={ <ItemListContainer/> } />
