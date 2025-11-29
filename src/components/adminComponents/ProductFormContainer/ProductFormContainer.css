@@ -1,0 +1,94 @@
+/* Contenedor principal del formulario, estilo tarjeta oscura */
+.product-form {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #20232a; /* Fondo gris oscuro consistente con el carrito */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Título del formulario */
+.product-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #61dafb; /* Azul/Cyan característico de tu app */
+    border-bottom: 2px solid #61dafb;
+    padding-bottom: 0.5rem;
+}
+
+/* Contenedores de cada campo (label + input) */
+.product-form > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+/* Etiquetas */
+.product-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #ddd; /* Blanco suave */
+    font-size: 0.95rem;
+}
+
+/* Estilos para inputs y textarea */
+.product-form input[type="text"],
+.product-form input[type="number"],
+.product-form input[type="file"],
+.product-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #282c34; /* Fondo más oscuro para inputs */
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto al seleccionar un campo */
+.product-form input:focus,
+.product-form textarea:focus {
+    outline: none;
+    border-color: #61dafb; /* Resaltado en azul */
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.3);
+}
+
+.product-form textarea {
+    min-height: 100px;
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+/* Mensajes de error en ROJO */
+.error {
+    color: #ff4d4d; /* Rojo claro/brillante para buena legibilidad en fondo oscuro */
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Botón de guardar (se adapta a la clase .btn global pero con ancho completo) */
+.product-form button[type="submit"] {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #61dafb;
+    color: #1a1a1a;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+}
+
+.product-form button[type="submit"]:hover:not(:disabled) {
+    background-color: #3d8f9f;
+    color: white;
+}
+
+.product-form button:disabled {
+    background-color: #555;
+    color: #aaa;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
