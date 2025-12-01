@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuthContext } from "../../context/AuthContext/useAuthContext";
 import { Navigate, useNavigate } from "react-router-dom";
+import "./Login.css";
 
 export const Login = () => {
     const [userForm, setUserForm] = useState({ name: "", password: "" });
@@ -31,7 +32,8 @@ export const Login = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        /* 👇 AQUÍ FALTABA AGREGAR LA CLASE */
+        <form className="login-form" onSubmit={handleSubmit}>
             <h2>Iniciar sesión</h2>
             <div>
                 <label>Usuario:</label>

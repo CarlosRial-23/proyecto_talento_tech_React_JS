@@ -1,38 +1,26 @@
 import { useEffect, useState } from "react";
-import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { getProductById } from "../../services/products";
 
 export const ItemDetailContainer = () => {
-  const [detail, setDetail] = useState({});
-
-
+  const [detail, setDetail] = useState(null); 
   const { id } = useParams();
 
   useEffect(() => {
-    fetch("/data/products.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("No se encontro el producto");
-        }
-
-        return res.json();
-      })
+    
+    getProductById(id)
       .then((data) => {
-        const found = data.find((p) => p.id === id); //Usamos el param para comparar el id del producto en el json
-        if (found) {
-          setDetail(found);
-        } else {
-          throw new Error("Producto no encontrado");
-        }
+        setDetail(data);
       })
       .catch((err) => {
-        console.log(err);
+        console.error("Error al obtener el producto:", err);
       });
   }, [id]);
 
   return (
     <main>
-      {Object.keys(detail).length ? (
+      {detail ? (
         <ItemDetail detail={detail} />
       ) : (
         <p>Cargando producto...</p>
